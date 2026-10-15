@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dados de Colaborador</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <link rel="stylesheet" href="/css/telas/TelaCadastro.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="container">
+      <!-- LADO ESQUERDO -->
+      <div class="left">
+        <div class="top-bar"></div>
+        <h1>Dados de Colaborador</h1>
+
+        <!-- LINHA 1 - Nome / CPF / Área -->
+        <div class="linha">
+          <div>
+            <label for="inputNome">Nome Completo</label>
+            <input
+              type="text"
+              placeholder="Digite seu nome completo"
+              id="inputNome"
+            />
+          </div>
+
+          <div>
+            <label for="inputCPF">CPF</label>
+            <input type="text" placeholder="Ex: 000.000.000-00" id="inputCPF" />
+          </div>
+
+          <div>
+            <label for="inputAreaAtuacao">Área de Atuação</label>
+            <input
+              type="text"
+              placeholder="Ex: Desenvolvedor BackEnd"
+              id="inputAreaAtuacao"
+            />
+          </div>
+        </div>
+
+        <!-- LINHA 2 - Email / Telefone / Nascimento -->
+        <div class="linha">
+          <div>
+            <label for="inputEmail">Email</label>
+            <input
+              type="email"
+              placeholder="seuEmail@gmail.com"
+              id="inputEmail"
+            />
+          </div>
+
+          <div>
+            <label for="inputTelefone">Telefone</label>
+            <input
+              type="text"
+              placeholder="(00) 00000-0000"
+              id="inputTelefone"
+            />
+          </div>
+
+          <div>
+            <label for="inputDataNascimento">Data de Nascimento</label>
+            <input type="date" id="inputDataNascimento" />
+          </div>
+        </div>
+
+        <h2>Habilidades</h2>
+
+        <div id="idiomasContainer">
+          <div class="linha">
+            <div>
+              <label for="inputIdioma0">Idiomas</label>
+              <input type="text" placeholder="Ex: Inglês" id="inputIdioma0" />
+            </div>
+            <div>
+              <label for="idiomaNivel0">Nível</label>
+              <select id="idiomaNivel0">
+                <option value="INICIANTE">Iniciante</option>
+                <option value="BASICO">Básico</option>
+                <option value="INTERMEDIARIO" selected>Intermediário</option>
+                <option value="AVANCADO">Avançado</option>
+                <option value="FLUENTE">Fluente</option>
+                <option value="NATIVO">Nativo</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div id="addIdiomaBtn" class="add">+ Adicionar idioma</div>
+
+        <!-- === TECNOLOGIAS (ATUALIZADO COM VALUES CORRETOS) === -->
+        <div id="techContainer" style="margin-top: 15px">
+          <div class="linha">
+            <div>
+              <label for="inputTech0">Tecnologias</label>
+              <input type="text" placeholder="JavaScript" id="inputTech0" />
+            </div>
+            <div>
+              <label for="techNivel0">Nível</label>
+              <select id="techNivel0">
+                <option value="JUNIOR">Júnior</option>
+                <option value="PLENO" selected>Pleno</option>
+                <option value="SENIOR">Sênior</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div id="addTechBtn" class="add">+ Adicionar tecnologia</div>
+
+        <!-- === EXPERIÊNCIA PROFISSIONAL === -->
+        <h2>Experiência Profissional</h2>
+        <div class="linha">
+          <div>
+            <label for="inputEmpresa0">Empresa</label>
+            <input
+              type="text"
+              placeholder="Digite o nome da empresa"
+              id="inputEmpresa0"
+            />
+          </div>
+          <div>
+            <label for="inputCargo0">Cargo</label>
+            <input
+              type="text"
+              placeholder="Cargo (Ex: Estágio de T.I)"
+              id="inputCargo0"
+            />
+          </div>
+        </div>
+
+        <label style="margin-top: 20px">Vigência do Contrato</label>
+        <div class="linha">
+          <input type="date" placeholder="Início" id="vigenciaInicio0" />
+          <input type="date" placeholder="Fim" id="vigenciaFim0" />
+        </div>
+
+        <div class="checkbox">
+          <input type="checkbox" id="empregoAtual0" />
+          <label for="empregoAtual0" style="font-size: 16px"
+            >Emprego Atual</label
+          >
+        </div>
+
+        <!-- CERTIFICADOS -->
+        <h2>Certificados e Certificações</h2>
+
+        <div id="certificadosContainer">
+          <div class="linha campo-cert">
+            <input type="file" id="certificadoFile0" />
+          </div>
+        </div>
+
+        <div id="addCertificadoBtn" class="add">+ Adicionar arquivo</div>
+        <button type="button" id="btnGerarPDF" class="btn btn-primary">
+          GERAR PDF
+        </button>
+      </div>
+
+      <!-- LADO DIREITO -->
+      <div class="right">
+        <div class="foto">
+          <input type="file" id="fotoInput" accept="image/*" />
+          <span id="fotoIcon">👤</span>
+        </div>
+
+        <div class="foto-texto">
+          Adicione uma<br />
+          foto de perfil
+        </div>
+
+        <div class="button-group">
+          <button type="button" onclick="location.href='SelecaoPerfil.html'">
+            VOLTAR
+          </button>
+
+          <button id="btnSalvar" type="button" class="btn btn-primary">
+            SALVAR
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- TELA DE SALVAMENTO -->
+    <div id="loadingScreen" class="loading-screen">
+      <div class="loading-text">SALVANDO...</div>
+    </div>
+
+    <script src="/js/apiService.js"></script>
+    <script src="/js/TelaCadastro.js" defer></script>
+  </body>
+</html>

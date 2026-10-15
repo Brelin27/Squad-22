@@ -1,0 +1,158 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+  background: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.login-container {
+  background: #3D3DD9;
+  width: 430px;
+  min-height: 100vh;
+  padding: 50px 35px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+}
+
+.login-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo {
+  width: 140px;
+  height: 140px;
+  margin-bottom: 25px;
+  object-fit: contain;
+}
+
+.login-title {
+  font-size: 26px;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin-bottom: 35px;
+  letter-spacing: 1px;
+}
+
+.input-wrapper {
+  width: 100%;
+  margin-bottom: 16px;
+  position: relative;
+}
+
+.input-field {
+  width: 100%;
+  height: 45px;
+  background: transparent;
+  border: 1.5px solid rgba(255, 255, 255, 0.5);
+  border-radius: 4px;
+  padding: 0 40px 0 15px;
+  color: #FFFFFF;
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.input-field::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.input-field:focus {
+  border-color: rgba(255, 255, 255, 0.8);
+}
+
+.input-icon {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  pointer-events: none;
+}
+
+.icon-stroke {
+  stroke: rgba(255, 255, 255, 0.7);
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.icon-fill {
+  fill: rgba(255, 255, 255, 0.7);
+}
+
+.btn-entrar {
+  width: 145px;
+  height: 42px;
+  background: #F8F32B;
+  color: #3D3DD9;
+  border: none;
+  border-radius: 22px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-entrar:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(248, 243, 43, 0.4);
+}
+
+.btn-entrar:active {
+  transform: translateY(0);
+}
+
+.links-section {
+  text-align: center;
+  color: #FFFFFF;
+  font-size: 14px;
+}
+
+.forgot-password {
+  color: #FFFFFF;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 12px;
+  transition: opacity 0.2s;
+}
+
+.forgot-password:hover {
+  opacity: 0.8;
+}
+
+.no-account {
+  display: block;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 13px;
+  margin-bottom: 6px;
+}
+
+.register-link {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  transition: opacity 0.2s;
+}
+
+.register-link:hover {
+  opacity: 0.8;
+}
