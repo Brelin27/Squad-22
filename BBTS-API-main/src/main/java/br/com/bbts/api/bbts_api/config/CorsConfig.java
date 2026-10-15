@@ -14,7 +14,7 @@ public class CorsConfig implements WebMvcConfigurer {
                     "http://localhost:5500", 
                     "http://127.0.0.1:5500",
                     "http://localhost:3000",
-                    "https://bbts-fod5.onrender.com"
+                    "https://squad-22-bbts-main.vercel.app"
                 )
                 .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
                 .allowedHeaders("*")
