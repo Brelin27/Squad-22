@@ -3,7 +3,7 @@
 // VERSÃO PRODUÇÃO - Render
 
 // ==================== CONFIGURAÇÃO ====================
-const API_BASE_URL = 'https://bbts-api.onrender.com';
+const API_BASE_URL = 'https://squad-22-backend-teste.onrender.com';
 
 // ==================== CARREGAMENTO AUTOMÁTICO ====================
 document.addEventListener("DOMContentLoaded", async () => {
