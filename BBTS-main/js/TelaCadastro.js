@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
         };
 
         console.log('📤 Cadastrando usuário...');
-        const responseUsuario = await fetch('https://bbts-api.onrender.com/usuarios', {
+        const responseUsuario = await fetch('https://squad-22-backend-teste.onrender.com', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(usuario)
@@ -83,7 +83,7 @@ document.addEventListener("DOMContentLoaded", () => {
           usuario: { id: usuarioId }
         };
 
-        await fetch('https://bbts-api.onrender.com/idiomas', {
+        await fetch('https://squad-22-backend-teste.onrender.com', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(idioma)
@@ -107,7 +107,7 @@ document.addEventListener("DOMContentLoaded", () => {
           usuario: { id: usuarioId }
         };
 
-        await fetch('https://bbts-api.onrender.com/tecnologias', {
+        await fetch('https://squad-22-backend-teste.onrender.com', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(tecnologia)
@@ -136,7 +136,7 @@ document.addEventListener("DOMContentLoaded", () => {
         usuario: { id: usuarioId }
       };
 
-      await fetch('https://bbts-api.onrender.com/experienciaProfissional', {
+      await fetch('https://squad-22-backend-teste.onrender.com', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(experiencia)
@@ -170,7 +170,7 @@ document.addEventListener("DOMContentLoaded", () => {
         console.log(`📤 Enviando certificação: ${nomeArquivo}`);
 
         try {
-          const response = await fetch('https://bbts-api.onrender.com/certificacoes', {
+          const response = await fetch('https://squad-22-backend-teste.onrender.com', {
             method: 'POST',
             body: formData
           });
