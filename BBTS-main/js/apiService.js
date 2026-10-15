@@ -2,7 +2,7 @@
 // Serviço centralizado para comunicação com a API - VERSÃO PRODUÇÃO
 
 // ==================== CONFIGURAÇÃO DA API ====================
-const API_BASE_URL = 'https://bbts-api.onrender.com';
+const API_BASE_URL = 'https://squad-22-backend-teste.onrender.com';
 
 // Configuração padrão do fetch
 const defaultHeaders = {
