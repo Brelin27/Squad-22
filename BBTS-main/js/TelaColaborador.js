@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   if (usuarioId) {
     try {
       // Busca os dados do usuário na API
-      const response = await fetch(`http://localhost:8080/usuarios/${usuarioId}`);
+      const response = await fetch(`https://squad-22-backend-teste.onrender.com/usuarios/${usuarioId}`);
 
       if (response.ok) {
         const usuario = await response.json();
@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   // --- CARREGAR TECNOLOGIAS/COMPETÊNCIAS ---
   try {
-    const response = await fetch('http://localhost:8080/tecnologias');
+    const response = await fetch('https://squad-22-backend-teste.onrender.com/tecnologias');
 
     if (response.ok) {
       const tecnologias = await response.json();
